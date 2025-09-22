@@ -1,6 +1,7 @@
 import { Github, Instagram, Linkedin, Mail } from "lucide-react"
 import { Navbar } from "~/components/navbar"
 import { motion } from "framer-motion"
+import { Button } from "~/components/ui/button"
 
 export const Hero = () => {
   return (
@@ -24,7 +25,7 @@ export const Hero = () => {
           </div>
           <div className="text-primary flex gap-5">
             <div className="bg-white p-3 rounded-full cursor-pointer" >
-              <Instagram className="w-10 h-10"/>
+              <Instagram className="w-10 h-10" />
             </div>
             <div className="bg-white p-3 rounded-full cursor-pointer" >
               <Linkedin className="w-10 h-10" />
@@ -36,9 +37,9 @@ export const Hero = () => {
               <Mail className="w-10 h-10" />
             </div>
           </div>
-          <button  className="bg-primary w-60 py-5 rounded-full font-semibold cursor-pointer hover:bg-secondary transition duration-500 active:scale-95">
+          <Button variant={"default"} className="bg-primary w-60 py-5 rounded-full font-semibold cursor-pointer hover:bg-secondary transition duration-500 active:scale-95" >
             View My Resume
-          </button>
+          </Button>
         </div>
         <div>
           {/* <div className="outline-2 ring-2 ring-primary outline-primary rounded-full w-fit">
