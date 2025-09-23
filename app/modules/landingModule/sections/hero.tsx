@@ -25,16 +25,16 @@ export const Hero = () => {
           </div>
           <div className="text-primary flex gap-5">
             <div className="bg-white p-3 rounded-full cursor-pointer" >
-              <Instagram className="w-10 h-10" />
+              <a href="https://www.instagram.com/gede.reksa/"><Instagram className="w-10 h-10" /></a>
             </div>
             <div className="bg-white p-3 rounded-full cursor-pointer" >
-              <Linkedin className="w-10 h-10" />
+              <a href="https://www.linkedin.com/in/dewa-gede-reksa-parama-aditya-a621b8323/"><Linkedin className="w-10 h-10" /></a>
             </div>
             <div className="bg-white p-3 rounded-full cursor-pointer" >
-              <Github className="w-10 h-10" />
+              <a href="https://github.com/Reksaditya"><Github className="w-10 h-10" /></a>
             </div>
             <div className="bg-white p-3 rounded-full cursor-pointer" >
-              <Mail className="w-10 h-10" />
+              <a href="mailto:reksaparamaaditya@gmail.com"><Mail className="w-10 h-10" /></a>
             </div>
           </div>
           <Button variant={"default"} className="bg-primary w-60 py-5 rounded-full font-semibold cursor-pointer hover:bg-secondary transition duration-500 active:scale-95 h-16" >

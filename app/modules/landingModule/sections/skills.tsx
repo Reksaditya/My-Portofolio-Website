@@ -104,7 +104,7 @@ const skillItem:skillProps[] = [
 
 export const Skills = () => {
   return (
-    <section className="flex flex-col items-center justify-center py-10 gap-16">
+    <section id="skills" className="flex flex-col items-center justify-center py-10 gap-16">
       <div className="flex flex-col gap-2 items-center justify-center">
         <h2 className="font-semibold text-primary flex justify-center text-4xl">My Skills</h2>
         <hr className="border-2 border-primary w-24" />

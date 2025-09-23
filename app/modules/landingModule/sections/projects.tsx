@@ -1,4 +1,5 @@
 import { div } from "framer-motion/client"
+import { useEffect, useState } from "react"
 import { Card, CardContent } from "~/components/ui/card"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "~/components/ui/carousel"
 
@@ -31,8 +32,18 @@ const projectItems: projectsProps[] = [
 ]
 
 export const Projects = () => {
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return <div className="h-40 w-full bg-gray-100 rounded-xl" />
+  }
+
   return (
-    <section className="py-10 flex flex-col jsutify-center items-center gap-10">
+    <section id="projects" className="py-10 flex flex-col jsutify-center items-center gap-10">
       <div className="flex flex-col gap-2 items-center justify-center">
         <h2 className="font-semibold text-primary flex justify-center text-4xl">Featured Projects</h2>
         <hr className="border-2 border-primary w-40" />

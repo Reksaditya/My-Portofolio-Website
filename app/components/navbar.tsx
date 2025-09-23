@@ -49,7 +49,7 @@ export const Navbar = () => {
                 damping: 25
               }}
               onClick={() => {
-                scroller.scrollTo(`${item.link}`, {
+                scroller.scrollTo(`#${item.link}`, {
                   duration: 500,
                   delay: 0,
                   smooth: 'easeInOut',

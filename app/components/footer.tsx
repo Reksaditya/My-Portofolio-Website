@@ -7,7 +7,7 @@ export const Footer = () => {
         <a href="https://www.instagram.com/gede.reksa/"><Instagram className="w-10 h-10" /></a>
         <a href="https://www.linkedin.com/in/dewa-gede-reksa-parama-aditya-a621b8323/"><Linkedin className="w-10 h-10" /></a>
         <a href="https://github.com/Reksaditya"><Github className="w-10 h-10" /></a>
-        <a href="reksaparamaaditya@gmail.com"><Mail className="w-10 h-10" /></a>
+        <a href="mailto:reksaparamaaditya@gmail.com"><Mail className="w-10 h-10" /></a>
       </div>
       <h5>©2025 Reksa Aditya. All Rights Reserved.</h5>
     </footer>
