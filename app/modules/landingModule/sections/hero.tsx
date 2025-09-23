@@ -47,7 +47,7 @@ export const Hero = () => {
               <p className="text-primary font-semibold">Web Developer</p>
             </div>
           </div> */}
-          <img src="/public/reksa.png" alt="reksa" width={600} height={600} />
+          <img src="/reksa.png" alt="reksa" width={600} height={600} />
         </div>
       </div>
     </section>

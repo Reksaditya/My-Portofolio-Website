@@ -47,13 +47,13 @@ export const Projects = () => {
                 <div className="p-1">
                   <Card>
                     <CardContent className="flex flex-col items-center justify-center">
-                      <img src={`public/${item.link}.png`} alt={item.name} width={item.size} />
+                      <img src={`/${item.link}.png`} alt={item.name} width={item.size} />
                       <h2 className="font-semibold text-primary">{item.name}</h2>
                       <div className="flex gap-4   justify-center items-center pt-2">
                         {item.tech.map((tech, index) => {
                           return (
                             <div key={index}>
-                              <img src={`public/${tech}.png`} alt={tech} width={25} />
+                              <img src={`/${tech}.png`} alt={tech} width={25} />
                             </div>
                           )
                         })}

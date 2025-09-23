@@ -116,7 +116,7 @@ export const Skills = () => {
               key={index}
               className="flex justify-center items-center"
             >
-              <img src={`/public/${item.skill}.png`} alt={item.skill} width={item.size} />
+              <img src={`/${item.skill}.png`} alt={item.skill} width={item.size} />
             </div>
           )
         })}
