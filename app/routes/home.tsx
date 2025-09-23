@@ -1,5 +1,7 @@
 import { LandingPage } from "~/modules/landingModule";
 import type { Route } from "./+types/home";
+import { div } from "framer-motion/client";
+import { Footer } from "~/components/footer";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -9,5 +11,10 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  return <LandingPage />;
+  return (
+    <div>
+      <LandingPage />
+      <Footer />
+    </div>
+  );
 }

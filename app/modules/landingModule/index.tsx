@@ -1,5 +1,6 @@
 import { About } from "./sections/about"
-import { Experience } from "./sections/experience"
+import { Archievement } from "./sections/archievement"
+import { Contact } from "./sections/contact"
 import { Hero } from "./sections/hero"
 import { Projects } from "./sections/projects"
 import { Skills } from "./sections/skills"
@@ -11,7 +12,8 @@ export const LandingPage = () => {
       <About />
       <Skills />
       <Projects />
-      <Experience />
+      <Archievement />
+      <Contact /> 
     </main>
   )
 }

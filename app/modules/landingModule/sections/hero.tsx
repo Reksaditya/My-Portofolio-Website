@@ -37,7 +37,7 @@ export const Hero = () => {
               <Mail className="w-10 h-10" />
             </div>
           </div>
-          <Button variant={"default"} className="bg-primary w-60 py-5 rounded-full font-semibold cursor-pointer hover:bg-secondary transition duration-500 active:scale-95" >
+          <Button variant={"default"} className="bg-primary w-60 py-5 rounded-full font-semibold cursor-pointer hover:bg-secondary transition duration-500 active:scale-95 h-16" >
             View My Resume
           </Button>
         </div>

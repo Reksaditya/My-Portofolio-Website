@@ -1,5 +1,6 @@
 import { motion } from "framer-motion"
 import { useState } from "react"
+import { scroller } from 'react-scroll'
 
 interface NavbarMenu {
   menu: string,
@@ -9,25 +10,24 @@ interface NavbarMenu {
 const NavbarProps: NavbarMenu[] = [
   {
     menu: "About",
-    link: ""
+    link: "about"
   },
   {
     menu: "Skills",
-    link: ""
+    link: "skills"
   },
   {
     menu: "Projects",
-    link: ""
+    link: "projects"
   },
   {
     menu: "Contact",
-    link: ""
+    link: "contacts"
   }
 ]
 
 export const Navbar = () => {
   let title = "{/} Reksa"
-  const [underlineVisible, setUnderlineVisible] = useState(false)
 
   return (
     <nav className="bg-background flex justify-between py-5 items-center">
@@ -48,24 +48,16 @@ export const Navbar = () => {
                 stiffness: 150,
                 damping: 25
               }}
-              className={`list-none cursor-pointer hover:`}
+              onClick={() => {
+                scroller.scrollTo(`${item.link}`, {
+                  duration: 500,
+                  delay: 0,
+                  smooth: 'easeInOut',
+                });
+              }}
+              className={`list-none cursor-pointer hover:font-bold hover:text-primary transition duration-300`}
             >
               {item.menu}
-              {underlineVisible && (
-                <motion.span
-                  initial={{ scaleX: 0, opacity: 0 }}
-                  animate={{ scaleX: 1, opacity: 1 }}
-                  exit={{ scaleX: 0, opacity: 0 }}
-                  transition={{
-                    duration: 0.4,
-                    delay: 0.2,
-                    type: "spring",
-                    stiffness: 200,
-                    damping: 20
-                  }}
-                  className={`block transition-all duration-500 h-0.5 bg-primary max-w-full`}
-                />
-              )}
             </motion.li>
           )
         })}
