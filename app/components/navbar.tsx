@@ -32,9 +32,9 @@ export const Navbar = () => {
   return (
     <nav className="bg-background flex justify-between py-5 items-center">
       <div>
-        <h1 className="text-primary font-semibold text-3xl">{title}</h1>
+        <h1 className="text-center lg:text-left text-primary font-semibold text-3xl">{title}</h1>
       </div>
-      <div className="flex gap-20">
+      <div className="gap-20 hidden lg:flex">
         {NavbarProps.map((item, index) => {
           return (
             <motion.li

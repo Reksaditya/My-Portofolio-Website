@@ -1,4 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader } from "~/components/ui/card"
+import { motion } from 'framer-motion'
 
 interface archievementProps {
   title: string,
@@ -32,26 +33,44 @@ const archevementItems: archievementProps[] = [
 export const Archievement = () => {
   return (
     <section className="py-10 flex flex-col jsutify-center items-center gap-10">
-      <div className="flex flex-col gap-2 items-center justify-center">
+      <motion.div
+        initial={{ opacity: 0, translateY: 100 }}
+        whileInView={{ opacity: 1, translateY: 0 }}
+        exit={{ opacity: 0, translateY: 100 }}
+        transition={{
+          duration: 0.5
+        }}
+        className="flex flex-col gap-2 items-center justify-center"
+      >
         <h2 className="font-semibold text-primary flex justify-center text-4xl">Archievement</h2>
         <hr className="border-2 border-primary w-32" />
-      </div>
+      </motion.div>
       <div className="flex flex-col gap-5">
         {archevementItems.map((item, index) => {
           return (
-            <Card className="w-full" key={index}>
-              <CardContent className="flex gap-10">
-                <img src={item.image} alt={item.title} width={250} />
-                <div className="w-full flex-col gap-5">
-                  <CardHeader className="font-semibold px-0">
-                    {item.title}
-                  </CardHeader>
-                  <CardDescription className="text-justify">
-                    {item.description}
-                  </CardDescription>
-                </div>
-              </CardContent>
-            </Card>
+            <motion.div
+              initial={{ opacity: 0, translateY: 100 }}
+              whileInView={{ opacity: 1, translateY: 0 }}
+              exit={{ opacity: 0, translateY: 100 }}
+              transition={{
+                delay: 0.1 * index,
+                duration: 0.5
+              }}
+            >
+              <Card className="w-full" key={index}>
+                <CardContent className="flex gap-10 items-center lg:items-start flex-col lg:flex-row">
+                  <img src={item.image} alt={item.title} width={250} />
+                  <div className="w-full flex-col gap-5">
+                    <CardHeader className="font-semibold px-0">
+                      {item.title}
+                    </CardHeader>
+                    <CardDescription className="text-justify">
+                      {item.description}
+                    </CardDescription>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
           )
         })}
       </div>

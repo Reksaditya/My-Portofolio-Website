@@ -7,7 +7,7 @@ import { Skills } from "./sections/skills"
 
 export const LandingPage = () => {
   return (
-    <main className="bg-background px-28">
+    <main className="bg-background px-5 md:px-28">
       <Hero />
       <About />
       <Skills />

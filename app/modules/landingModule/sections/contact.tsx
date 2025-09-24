@@ -48,8 +48,8 @@ export const Contact = () => {
         <hr className="border-2 border-primary w-32" />
       </div>
       <form action="" className="w-full flex flex-col gap-4" onSubmit={handleSubmit}>
-        <div className="flex gap-4">
-          <div className="w-1/2 flex flex-col gap-4">
+        <div className="flex gap-4 flex-col lg:flex-row">
+          <div className="w-full lg:w-1/2 flex flex-col gap-4">
             <Input
               type="text"
               name="name"
